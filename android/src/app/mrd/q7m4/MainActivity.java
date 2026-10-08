@@ -6,6 +6,9 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.provider.OpenableColumns;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageInstaller;
 import android.content.Intent;
@@ -31,7 +34,7 @@ public class MainActivity extends Activity {
  private WebView web;
  private ValueCallback<Uri[]> fileCallback;
  private byte[] pendingExport;
- private static final int PICK=10,SAVE=11;
+ private static final int PICK=10,SAVE=11,LINK=12;
  // Updates are read only from this fixed release; Android itself refuses an APK not signed with the installed key.
  private static final String UPDATE_BASE="https://github.com/Josperdias/mrd-q7m4-core/releases/download/apk-latest/";
  private static final String ACTION_INSTALL="app.mrd.q7m4.INSTALL_STATUS";
@@ -48,7 +51,7 @@ public class MainActivity extends Activity {
   web=new WebView(this);web.setBackgroundColor(Color.rgb(245,246,243));web.setOverScrollMode(View.OVER_SCROLL_NEVER);root.addView(web,new LinearLayout.LayoutParams(-1,-1));setContentView(root);
   registerInstallReceiver();
   WebSettings s=web.getSettings();s.setJavaScriptEnabled(true);s.setDomStorageEnabled(true);s.setDatabaseEnabled(true);s.setAllowFileAccess(false);s.setAllowContentAccess(true);s.setAllowFileAccessFromFileURLs(false);s.setAllowUniversalAccessFromFileURLs(false);s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);s.setDefaultTextEncodingName("UTF-8");s.setMediaPlaybackRequiresUserGesture(true);s.setSupportZoom(false);
-  web.addJavascriptInterface(new ExportBridge(),"MeridianNative");web.addJavascriptInterface(new UpdateBridge(),"MeridianUpdater");
+  web.addJavascriptInterface(new ExportBridge(),"MeridianNative");web.addJavascriptInterface(new UpdateBridge(),"MeridianUpdater");web.addJavascriptInterface(new DriveBridge(),"MeridianDrive");
   web.setWebViewClient(new WebViewClient(){
    @Override public boolean shouldOverrideUrlLoading(WebView v,WebResourceRequest req){Uri uri=req.getUrl();if(ORIGIN.startsWith(uri.getScheme()+"://"+uri.getHost()+"/"))return false;if("https".equals(uri.getScheme())||"http".equals(uri.getScheme())){try{startActivity(new Intent(Intent.ACTION_VIEW,uri));}catch(Exception e){message("Nenhum navegador disponível.");}}return true;}
    @Override public WebResourceResponse shouldInterceptRequest(WebView v,WebResourceRequest req){
@@ -124,10 +127,31 @@ public class MainActivity extends Activity {
    new Thread(()->{try{downloadAndInstall();}catch(Exception e){emit("error","message","Não foi possível baixar a atualização. Confira a conexão e tente de novo.");}finally{updating=false;}}).start();
   });}
  }
+
+ // ---- Link to a Drive file chosen once through the system file picker (no Google API keys) ----
+ private void emitDrive(String type,Object... kv){try{JSONObject o=new JSONObject().put("type",type);for(int i=0;i+1<kv.length;i+=2)o.put(String.valueOf(kv[i]),kv[i+1]);final String js="window.meridianDrive&&window.meridianDrive("+o.toString()+")";runOnUiThread(()->{if(web!=null)web.evaluateJavascript(js,null);});}catch(Exception e){}}
+ private SharedPreferences prefs(){return getSharedPreferences("meridian",MODE_PRIVATE);}
+ private String driveName(Uri uri){try(Cursor c=getContentResolver().query(uri,null,null,null,null)){if(c!=null&&c.moveToFirst()){int i=c.getColumnIndex(OpenableColumns.DISPLAY_NAME);if(i>=0)return c.getString(i);}}catch(Exception e){}return "arquivo do Drive";}
+ public class DriveBridge{
+  @JavascriptInterface public String driveInfo(){String u=prefs().getString("driveUri",null);try{JSONObject o=new JSONObject();if(u!=null){o.put("linked",true).put("name",prefs().getString("driveName",""));}else o.put("linked",false);return o.toString();}catch(Exception e){return "{\"linked\":false}";}}
+  @JavascriptInterface public void linkDrive(){runOnUiThread(()->{
+   if(web==null||web.getUrl()==null||!web.getUrl().startsWith(ORIGIN))return;
+   try{Intent intent=new Intent(Intent.ACTION_CREATE_DOCUMENT);intent.addCategory(Intent.CATEGORY_OPENABLE);intent.setType("application/json");intent.putExtra(Intent.EXTRA_TITLE,"Meridian_Sync.json");intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION|Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION);startActivityForResult(intent,LINK);}catch(Exception e){emitDrive("error","message","Não foi possível abrir o seletor de arquivos.");}
+  });}
+  @JavascriptInterface public void syncDrive(String json){
+   if(json==null||json.length()>5*1024*1024){emitDrive("error","message","Resumo grande demais para sincronizar.");return;}
+   final String data=json;final String u=prefs().getString("driveUri",null);
+   if(u==null){emitDrive("error","message","Vincule um arquivo do Drive primeiro.");return;}
+   new Thread(()->{try(OutputStream out=getContentResolver().openOutputStream(Uri.parse(u),"wt")){if(out==null)throw new IOException("sem acesso");out.write(data.getBytes("UTF-8"));emitDrive("synced","at",System.currentTimeMillis());}catch(Exception e){emitDrive("error","message","Não foi possível gravar no Drive. Vincule o arquivo de novo.");}}).start();
+  }
+  @JavascriptInterface public void unlinkDrive(){String u=prefs().getString("driveUri",null);if(u!=null){try{getContentResolver().releasePersistableUriPermission(Uri.parse(u),Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION);}catch(Exception e){}}prefs().edit().remove("driveUri").remove("driveName").apply();emitDrive("unlinked");}
+ }
  @Override protected void onActivityResult(int request,int result,Intent data){super.onActivityResult(request,result,data);
   if(request==PICK&&fileCallback!=null){fileCallback.onReceiveValue(WebChromeClient.FileChooserParams.parseResult(result,data));fileCallback=null;}
+  if(request==LINK){if(result==RESULT_OK&&data!=null&&data.getData()!=null){Uri uri=data.getData();boolean persisted=true;try{getContentResolver().takePersistableUriPermission(uri,Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION);}catch(Exception e){persisted=false;}
+   if(persisted){String name=driveName(uri);prefs().edit().putString("driveUri",uri.toString()).putString("driveName",name).apply();emitDrive("linked","name",name);}else emitDrive("error","message","Este local não permite vínculo permanente. Escolha uma pasta do Google Drive.");}}
   if(request==SAVE){if(result==RESULT_OK&&data!=null&&data.getData()!=null&&pendingExport!=null){try(OutputStream stream=getContentResolver().openOutputStream(data.getData())){stream.write(pendingExport);message("Arquivo salvo.");}catch(Exception e){message("Falha ao salvar. Tente exportar novamente.");}}pendingExport=null;}
  }
  @Override public void onBackPressed(){if(web!=null){web.evaluateJavascript("(function(){var d=document.querySelector('dialog[open]');if(d){d.close();return 'closed';}return 'back';})()",result->{if("\"back\"".equals(result)){if(web.canGoBack())web.goBack();else new AlertDialog.Builder(this).setMessage("Sair do Meridian?").setPositiveButton("Sair",(d,w)->finish()).setNegativeButton("Continuar",null).show();}});}else super.onBackPressed();}
- @Override protected void onDestroy(){if(installReceiver!=null){try{unregisterReceiver(installReceiver);}catch(Exception e){}installReceiver=null;}if(web!=null){web.removeJavascriptInterface("MeridianNative");web.removeJavascriptInterface("MeridianUpdater");web.destroy();web=null;}super.onDestroy();}
+ @Override protected void onDestroy(){if(installReceiver!=null){try{unregisterReceiver(installReceiver);}catch(Exception e){}installReceiver=null;}if(web!=null){web.removeJavascriptInterface("MeridianNative");web.removeJavascriptInterface("MeridianUpdater");web.removeJavascriptInterface("MeridianDrive");web.destroy();web=null;}super.onDestroy();}
 }
