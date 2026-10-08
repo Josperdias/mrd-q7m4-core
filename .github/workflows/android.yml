@@ -53,7 +53,7 @@ jobs:
           SUM="$(sha256sum "$APK" | cut -d' ' -f1)"
           printf '{"versionCode":%s,"versionName":"1.0.%s","file":"Meridian-1.0.%s.apk","sha256":"%s","commit":"%s"}\n' "$GITHUB_RUN_NUMBER" "$GITHUB_RUN_NUMBER" "$GITHUB_RUN_NUMBER" "$SUM" "$GITHUB_SHA" > "$RUNNER_TEMP/update.json"
           gh release delete apk-latest --cleanup-tag --yes || true
-          gh release create apk-latest "$VAPK" "$APK" "$RUNNER_TEMP/update.json" \
+          gh release create apk-latest "$VAPK" "$RUNNER_TEMP/update.json" \
             --target "$GITHUB_SHA" \
             --title "Meridian 1.0.$GITHUB_RUN_NUMBER (APK)" \
-            --notes "APK built by GitHub Actions from commit $GITHUB_SHA ($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID). Version 1.0.$GITHUB_RUN_NUMBER (build $GITHUB_RUN_NUMBER). Download Meridian-1.0.$GITHUB_RUN_NUMBER.apk; Meridian-1.0.0.apk is the same file under the old name, kept so installed copies can still update. SHA-256: $SUM"
+            --notes "APK built by GitHub Actions from commit $GITHUB_SHA ($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID). Version 1.0.$GITHUB_RUN_NUMBER (build $GITHUB_RUN_NUMBER). File: Meridian-1.0.$GITHUB_RUN_NUMBER.apk. SHA-256: $SUM"
