@@ -20,7 +20,20 @@ jobs:
           SDKM="$(ls "$ANDROID_SDK_ROOT"/cmdline-tools/*/bin/sdkmanager | sort -V | tail -n1)"
           yes | "$SDKM" --sdk_root="$ANDROID_SDK_ROOT" --licenses >/dev/null || true
           "$SDKM" --sdk_root="$ANDROID_SDK_ROOT" 'platforms;android-35' 'build-tools;35.0.0'
-      - run: bash scripts/build-android.sh
+      - name: Build and sign APK
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          MERIDIAN_KS_PASS: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          MERIDIAN_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          MERIDIAN_KEY_PASS: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          if [ -n "$KEYSTORE_B64" ]; then
+            echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/release.keystore"
+            export MERIDIAN_KEYSTORE="$RUNNER_TEMP/release.keystore"
+          else
+            echo "No signing secrets found: using a throwaway development key."
+          fi
+          bash scripts/build-android.sh
       - uses: actions/upload-artifact@v4
         with:
           name: Meridian-Android-development
