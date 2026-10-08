@@ -12,7 +12,7 @@ cp "$PROJECT_ROOT/dist/icon-192.png" "$BUILD/res/drawable/ic_launcher.png"
 javac -source 8 -target 8 -bootclasspath "$PLATFORM:$BT/core-lambda-stubs.jar" -d "$BUILD/classes" "$PROJECT_ROOT/android/src/app/mrd/q7m4/MainActivity.java"
 mapfile -t CLASS_FILES < <(find "$BUILD/classes" -name '*.class')
 "$BT/d8" --lib "$PLATFORM" --min-api 26 --output "$BUILD/dex" "${CLASS_FILES[@]}"
-"$BT/aapt" package -f -M "$PROJECT_ROOT/android/AndroidManifest.xml" -I "$PLATFORM" -S "$BUILD/res" -A "$BUILD/assets" -F "$BUILD/unsigned.apk"
+"$BT/aapt" package -f -M "$PROJECT_ROOT/android/AndroidManifest.xml" --version-code "${MERIDIAN_VERSION_CODE:-1}" --version-name "${MERIDIAN_VERSION_NAME:-1.0.0}" -I "$PLATFORM" -S "$BUILD/res" -A "$BUILD/assets" -F "$BUILD/unsigned.apk"
 (cd "$BUILD/dex" && zip -q -j "$BUILD/unsigned.apk" classes.dex)
 "$BT/zipalign" -f -p 4 "$BUILD/unsigned.apk" "$BUILD/aligned.apk"
 # Signing: use the fixed key supplied through MERIDIAN_KEYSTORE / MERIDIAN_KS_PASS /
@@ -29,4 +29,5 @@ else
 fi
 "$BT/apksigner" sign --ks "$KEYSTORE" --ks-key-alias "$KS_ALIAS" --ks-pass env:MERIDIAN_KS_PASS --key-pass env:MERIDIAN_KEY_PASS --out "$BUILD/Meridian-1.0.0.apk" "$BUILD/aligned.apk"
 "$BT/apksigner" verify --verbose --print-certs "$BUILD/Meridian-1.0.0.apk"
+"$BT/aapt" dump badging "$BUILD/Meridian-1.0.0.apk" | grep -E "^(package|uses-permission: name=.android.permission.(INTERNET|REQUEST_INSTALL_PACKAGES))"
 echo "$BUILD/Meridian-1.0.0.apk"
