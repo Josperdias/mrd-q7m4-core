@@ -100,7 +100,8 @@ public class MainActivity extends Activity {
   String want=u.getString("sha256").toLowerCase(Locale.ROOT);
   File dir=new File(getCacheDir(),"updates");dir.mkdirs();File apk=new File(dir,"Meridian.apk");
   MessageDigest md=MessageDigest.getInstance("SHA-256");
-  HttpURLConnection c=open(UPDATE_BASE+"Meridian-1.0.0.apk");
+  String file=u.optString("file","Meridian-1.0.0.apk");if(!file.matches("Meridian-[0-9.]+\\.apk"))file="Meridian-1.0.0.apk";
+  HttpURLConnection c=open(UPDATE_BASE+file);
   try{long total=c.getContentLengthLong();if(total>MAX_APK)throw new IOException("APK too large");
    try(InputStream in=c.getInputStream();OutputStream out=new FileOutputStream(apk)){byte[] buf=new byte[64*1024];long got=0;int last=-1,n;while((n=in.read(buf))>0){out.write(buf,0,n);md.update(buf,0,n);got+=n;if(got>MAX_APK)throw new IOException("APK too large");if(total>0){int pct=(int)(got*100/total);if(pct!=last&&pct%5==0){last=pct;emit("progress","pct",pct);}}}}
   }finally{c.disconnect();}
