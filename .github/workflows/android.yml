@@ -15,8 +15,11 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - uses: android-actions/setup-android@v3
-      - run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Install Android platform and build tools
+        run: |
+          SDKM="$(ls "$ANDROID_SDK_ROOT"/cmdline-tools/*/bin/sdkmanager | sort -V | tail -n1)"
+          yes | "$SDKM" --sdk_root="$ANDROID_SDK_ROOT" --licenses >/dev/null || true
+          "$SDKM" --sdk_root="$ANDROID_SDK_ROOT" 'platforms;android-35' 'build-tools;35.0.0'
       - run: bash scripts/build-android.sh
       - uses: actions/upload-artifact@v4
         with:
