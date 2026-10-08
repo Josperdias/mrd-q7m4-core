@@ -1,0 +1,25 @@
+name: Probe exam sources (one-off)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python3 scripts/probe.py \
+            https://www.institutoquadrix.org.br/ \
+            https://www.institutoquadrix.org.br/concursos/ \
+            https://www.cebraspe.org.br/concursos \
+            https://www.economia.df.gov.br/category/gestao-de-pessoas/concursos \
+            https://www.iades.com.br/ \
+            https://www.ibfc.org.br/ \
+            https://conhecimento.fgv.br/concursos \
+            https://www.concursosfcc.com.br/ \
+            https://selecao.net.br/ \
+            https://www.fub.unb.br/ \
+            https://www.cl.df.gov.br/ \
+            https://www.metro.df.gov.br/ \
+            https://www.pcdf.df.gov.br/
