@@ -1,0 +1,10 @@
+node_modules/
+.openai/local*
+*.keystore
+*.jks
+*.apk
+*.zip
+android/build/
+android/local.properties
+__pycache__/
+private/

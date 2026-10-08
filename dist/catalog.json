@@ -1,0 +1,1346 @@
+{
+  "format": "meridian-catalog",
+  "version": 1,
+  "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+  "materials": [
+    {
+      "id": "tcdf-edital",
+      "title": "TCDF · edital consolidado e programa de estudos",
+      "kind": "Edital oficial",
+      "url": "https://cdn.cebraspe.org.br/concursos/TC_DF_26_ANALISTA/arquivos/132841120D1767C91430042A81063E012CD5EDDBC11169982C8B711A9A932EBB.pdf",
+      "examIds": [
+        "tcdf-2026"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-10-07",
+      "localUrl": "resources/tcdf-edital-2026.pdf",
+      "sha256": "2874935266474c40c87592a83275d0a0de1a7c38b4ffc0675a657d575c8cd68f",
+      "bytes": 693314,
+      "downloadedAt": "2026-10-08"
+    },
+    {
+      "id": "tcdf-portal",
+      "title": "TCDF · acompanhamento oficial Cebraspe",
+      "kind": "Banca oficial",
+      "url": "https://www.cebraspe.org.br/concursos/TC_DF_26_ANALISTA",
+      "examIds": [
+        "tcdf-2026"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-10-07"
+    },
+    {
+      "id": "tcego-edital",
+      "title": "TCE-GO · edital consolidado e conteúdo programático",
+      "kind": "Edital oficial",
+      "url": "https://www.concursosfcc.com.br/concursos/tcego125/edital_de_abertura_versaex771_o_15_09_2026_-_consolidado_com_retificacoes__1_.pdf",
+      "examIds": [
+        "tcego-2026"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-10-07",
+      "localUrl": "resources/tcego-edital-2026.pdf",
+      "sha256": "069fc2fa87e0e2e8a570675de1d0bce438959e8904961e0936d35d3b283e36b3",
+      "bytes": 527047,
+      "downloadedAt": "2026-10-08"
+    },
+    {
+      "id": "tcego-portal",
+      "title": "TCE-GO · inscrições e acompanhamento FCC",
+      "kind": "Banca oficial",
+      "url": "https://www.concursosfcc.com.br/concursos/tcego125/index.html",
+      "examIds": [
+        "tcego-2026"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-10-07"
+    },
+    {
+      "id": "tcego-normas",
+      "title": "TCE-GO · legislação, regimento e atos normativos",
+      "kind": "Legislação oficial",
+      "url": "https://portal.tce.go.gov.br/tce-juris",
+      "examIds": [
+        "tcego-2026"
+      ],
+      "status": "verified",
+      "verifiedAt": "2026-10-07"
+    },
+    {
+      "id": "unb-3cd6b2dd6f",
+      "title": "Comunicado sobre a disponibilização da consulta individual à situação provisória de isenção de taxa",
+      "kind": "Comunicado",
+      "url": "https://cdn.cebraspe.org.br/vestibulares/VESTUNB_27/arquivos/3CD6B2DD6FF29FFAE38FE0CAC942FC40B2FA313645AF6DC05A5120B3A18B8FB6.pdf",
+      "examIds": [
+        "unb-2027"
+      ],
+      "verifiedAt": "2026-10-08"
+    },
+    {
+      "id": "unb-4e13c46304",
+      "title": "Edital nº 6 - Retificação de datas constantes do Anexo II – Cronograma de Atividades",
+      "kind": "Edital oficial",
+      "url": "https://cdn.cebraspe.org.br/vestibulares/VESTUNB_27/arquivos/4E13C46304314191939AFEFF0B107448F2BA550CAB5DD1F437EB7FC80F99A86C.pdf",
+      "examIds": [
+        "unb-2027"
+      ],
+      "verifiedAt": "2026-10-08"
+    },
+    {
+      "id": "unb-57e1197e3c",
+      "title": "Edital nº 5 - Reabertura do período de solicitação de inscrição e do prazo para envio da documentação",
+      "kind": "Edital oficial",
+      "url": "https://cdn.cebraspe.org.br/vestibulares/VESTUNB_27/arquivos/57E1197E3C7200876077CB5213C846983C3C1D9761C9EEE10BF9572FCC58F923.pdf",
+      "examIds": [
+        "unb-2027"
+      ],
+      "verifiedAt": "2026-10-08"
+    },
+    {
+      "id": "unb-062c6261cb",
+      "title": "Edital nº 4 - Prorrogação do período de solicitação de inscrição e do prazo para envio da documentação",
+      "kind": "Edital oficial",
+      "url": "https://cdn.cebraspe.org.br/vestibulares/VESTUNB_27/arquivos/062C6261CBB3D74FABFB95786FF0AFDE886A1A768F30A93AA8667A14EEA38F34.pdf",
+      "examIds": [
+        "unb-2027"
+      ],
+      "verifiedAt": "2026-10-08"
+    },
+    {
+      "id": "unb-dd714b67de",
+      "title": "Edital nº 3 - Retificação no Anexo I – Quadro de Vagas do Edital  nº 1 – Vestibular 2027",
+      "kind": "Edital oficial",
+      "url": "https://cdn.cebraspe.org.br/vestibulares/VESTUNB_27/arquivos/DD714B67DEA15F650C1C075EF6E31CF389820EFF3C97475F7839BA8D925CF47F.pdf",
+      "examIds": [
+        "unb-2027"
+      ],
+      "verifiedAt": "2026-10-08"
+    },
+    {
+      "id": "unb-940acbfd52",
+      "title": "Edital nº 2 - Retificação do subitem 12.2.6 do Edital nº 1 – Vestibular 2027, de 25 de agosto de 2026",
+      "kind": "Edital oficial",
+      "url": "https://cdn.cebraspe.org.br/vestibulares/VESTUNB_27/arquivos/940ACBFD52E6AF30CD77DF6AE917FC5F9127774F7C3561CC166BE6F6D0BA3E32.pdf",
+      "examIds": [
+        "unb-2027"
+      ],
+      "verifiedAt": "2026-10-08"
+    },
+    {
+      "id": "unb-efb9c7bca0",
+      "title": "Edital nº 1 - Abertura – Atualizado conforme retificações",
+      "kind": "Edital oficial",
+      "url": "https://cdn.cebraspe.org.br/vestibulares/VESTUNB_27/arquivos/EFB9C7BCA02CFC57B7F4128EA22079B33CE4868ADE02FE086C6AA3614280B124.pdf",
+      "examIds": [
+        "unb-2027"
+      ],
+      "verifiedAt": "2026-10-08",
+      "localUrl": "resources/unb-edital-2027.pdf",
+      "sha256": "252edcacc04216c0221a6afe927a3e853cc54e594998659e905deb286b1081c1",
+      "bytes": 1707936,
+      "downloadedAt": "2026-10-08"
+    },
+    {
+      "id": "enem-official-papers",
+      "title": "Provas e gabaritos de edições anteriores",
+      "kind": "Acervo oficial",
+      "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos",
+      "examIds": [
+        "enem-2026"
+      ],
+      "verifiedAt": "2026-10-08"
+    },
+    {
+      "id": "enem-official-legislation",
+      "title": "Editais e retificações Enem2026",
+      "kind": "Edital oficial",
+      "url": "https://www.gov.br/inep/pt-br/centrais-de-conteudo/legislacao/enem",
+      "examIds": [
+        "enem-2026"
+      ],
+      "verifiedAt": "2026-10-08"
+    },
+    {
+      "id": "enem-redacao",
+      "title": "Cartilha da redação · Enem 2026",
+      "kind": "Orientação oficial",
+      "url": "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-2026-cartilha-da-redacao-esta-disponivel",
+      "examIds": [
+        "enem-2026"
+      ],
+      "verifiedAt": "2026-10-08"
+    },
+    {
+      "id": "unb-guia",
+      "title": "Guia e boletins do Vestibular UnB",
+      "kind": "Orientação oficial",
+      "url": "https://www.cebraspe.org.br/vestibular-unb-publicacoes/",
+      "examIds": [
+        "unb-2027"
+      ],
+      "verifiedAt": "2026-10-08"
+    },
+    {
+      "id": "2e43ece8d898f0819d",
+      "title": "Edital nº 2 - Retificação da alínea “a” do subitem 10.1 do Edital nº 1, bem como a renumeração de tópicos de Direito Previdenciário, constantes dos conhecimentos específicos ao cargo",
+      "url": "https://cdn.cebraspe.org.br/concursos/TC_DF_26_ANALISTA/arquivos/5CB46AAAA40D34A100FD4FC47162F1A1DE432F92456E8098F2FB11523DBA7876.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "tcdf-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://apis.cebraspe.org.br/cebraspe/eventos/TC_DF_26_ANALISTA",
+      "status": "needs_review"
+    },
+    {
+      "id": "6998cc5846566a1fc5",
+      "title": "Respostas às impugnações",
+      "url": "https://cdn.cebraspe.org.br/concursos/TC_DF_26_ANALISTA/arquivos/75C36FF3C215E6CFFA300881357F2BDC07C21274783904E96C5106CFA817639E.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "tcdf-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://apis.cebraspe.org.br/cebraspe/eventos/TC_DF_26_ANALISTA",
+      "status": "needs_review"
+    },
+    {
+      "id": "d342b2937aa323f060",
+      "title": "Edital n° 1 - Abertura",
+      "url": "https://cdn.cebraspe.org.br/concursos/TC_DF_26_ANALISTA/arquivos/7971F586B9A9CE2C60801C731D8A1CD87F4C5136CA1F1E346C27C5C743773A73.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "tcdf-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://apis.cebraspe.org.br/cebraspe/eventos/TC_DF_26_ANALISTA",
+      "status": "needs_review"
+    },
+    {
+      "id": "d27cd8e4ec3454cf2f",
+      "title": "Edital nº 1 - Abertura",
+      "url": "https://cdn.cebraspe.org.br/vestibulares/VESTUNB_27/arquivos/0529F1423251C28A9D2EC8C3BC2A5C76D35BAB64F702B0CF6DCA7214D68B3A59.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "unb-2027"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://apis.cebraspe.org.br/cebraspe/eventos/VESTUNB_27",
+      "status": "needs_review"
+    },
+    {
+      "id": "3397e22a45df88e65d",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D1_CD1",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD1.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "c9453fd0bfd0e443bc",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D1_CD1",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D1_CD1.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "8cb13350e9bd32f53b",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D1_CD2",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD2.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "ae8b00306b58424fa2",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D1_CD2",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D1_CD2.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "9544047408e834728b",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D1_CD3",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD3.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "3f2e6dacb5fcba33a4",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D1_CD3",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D1_CD3.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "38edb9f36c064b91eb",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D1_CD4",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD4.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "4def798854679fd256",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D1_CD4",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D1_CD4.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "386fd3abe802e034e1",
+      "title": "Prova (Atendimento Especializado)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD9.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "e24ee097bc5da74aba",
+      "title": "Prova (Ledor)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD9_ledor.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "a4016eacbf93f2fceb",
+      "title": "Prova (Ampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD9_ampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "f828a8a140016b24a9",
+      "title": "Prova (Superampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD9_superampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "060376abe0b580cb34",
+      "title": "Prova | Leitor de tela (NVDA)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_Dia_1_P1_LC_CH_Caderno_09_Laranja_NVDA.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "2f7959acc236b0e087",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D1_CD9",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D1_CD9.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "6d79cb0d54c7fdf7e1",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D1_CD10",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD10.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "ad821b086d8b9fd38a",
+      "title": "Prova (Ampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD10_ampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "43c0ff027627ee19c3",
+      "title": "Prova (Superampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD10_superampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "1683fb997a13f9e3ab",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D1_CD10",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D1_CD10.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "39d58613f8e47d6e07",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D2_CD5",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD5.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "8709e936aa2b1b189e",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D2_CD5",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D2_CD5.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "f14c4d97e09a31f51f",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D2_CD6",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD6.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "100a14ea1758519774",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D2_CD6",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D2_CD6.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "b799610e47cd10837d",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D2_CD7",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD7.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "13bc07358c9791e76f",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D2_CD7",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D2_CD7.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "3998d5e653554bac80",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D2_CD8",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD8.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "540f66dfbfd3ec1f27",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D2_CD8",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D2_CD8.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "a6b11e82477a31bbf2",
+      "title": "Prova (Atendimento Especializado)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD11.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "982eff8e75c9a93b39",
+      "title": "Prova (Ledor)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD11_ledor.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "d603f8cc30eb28cb50",
+      "title": "Prova (Ampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD11_ampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "dbcf88036579f6490d",
+      "title": "Prova (Superampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD11_superampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "3b4ed04a2b69260372",
+      "title": "Prova | Leitor de tela (NVDA)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_Dia_2_P1_CN_MT_Caderno_11_Laranja_NVDA.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "fa5427416ec16955a0",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D2_CD11",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D2_CD11.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "d7dc347b66589757fc",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D2_CD12",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD12.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "0f25ccf1b15f7f2ea3",
+      "title": "Prova (Ampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD12_ampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "992ff852ef2ed76a68",
+      "title": "Prova (Superampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD12_superampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "b68913871f4d556f3d",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D2_CD12",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D2_CD12.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "228e8879e88c62a1ce",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D3_CD1",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D3_CD1.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "649f41d1bd47513353",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D3_CD1",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D3_CD1.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "3c06958591ea8da9bd",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D3_CD2",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D3_CD2.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "6172706aa16dcb08db",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D3_CD2",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D3_CD2.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "1cfdb1bdb2616bb701",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D3_CD3",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D3_CD3.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "7e24fb2dd209be683d",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D3_CD3",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D3_CD3.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "8311bcffed5077bbf2",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D3_CD4",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D3_CD4.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "1a6301728d3ecf4d97",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D3_CD4",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D3_CD4.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "496d8c37549795ae3a",
+      "title": "Prova (Atendimento Especializado)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D3_CD9.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "ea9118a52cf3a91683",
+      "title": "Prova (Ledor)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D3_CD9_ledor.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "96a63c9e52fa484a93",
+      "title": "Prova (Ampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D3_CD9_ampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "46cade2cc17cbf7da8",
+      "title": "Prova (Superampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D3_CD9_superampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "a5b0588768e1b0e353",
+      "title": "Prova | Leitor de tela (NVDA)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_Dia_1_P2_LC_CH_Caderno_09_Laranja_NVDA.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "32462b2cefd389c0ca",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D3_CD9",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D3_CD9.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "0e0b80e1ef60a15d4d",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D4_CD5",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D4_CD5.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "ad229e1ae262ff086d",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D4_CD5",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D4_CD5.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "41c9d8e5ccfca88c7a",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D4_CD6",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D4_CD6.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "d55eedd1587319c980",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D4_CD6",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D4_CD6.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "5758bd0f9b8a20b913",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D4_CD7",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D4_CD7.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "2ab83eff6773307da5",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D4_CD7",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D4_CD7.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "0091b898a64dbace0e",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D4_CD8",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D4_CD8.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "46f88df7ca2bf8bb9f",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D4_CD8",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D4_CD8.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "3b073115999290ec6b",
+      "title": "Prova (Atendimento Especializado)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D4_CD11.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "da420ad54fc928124a",
+      "title": "Prova (Ledor)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D4_CD11_ledor.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "4f76bc00f667f40ddf",
+      "title": "Prova (Ampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D4_CD11_ampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "c5c04e410db0a39040",
+      "title": "Prova (Superampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D4_CD11_superampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "2baea14568e08af709",
+      "title": "Prova | Leitor de tela (NVDA)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_Dia_2_P2_CN_MT_Caderno_11_Laranja_NVDA.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "f6f0944ffd5bc35631",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D4_CD11",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D4_CD11.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "ec7a142f49c9b355a7",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D5_CD1",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D5_CD1.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "8a92564f50754d97b0",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D5_CD1",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D5_CD1.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "6c43d94613a00706be",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D5_CD2",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D5_CD2.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "913f6c6bf147fc87b3",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D5_CD2",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D5_CD2.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "2443988b22913fdf1c",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D5_CD3",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D5_CD3.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "3d4307d3a76d5344a5",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D5_CD3",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D5_CD3.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "9e5e0f320aff5f93ed",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D5_CD4",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D5_CD4.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "cf834d4c81f6a45f03",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D5_CD4",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D5_CD4.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "efeee74d4fc2c67f17",
+      "title": "Prova (Atendimento Especializado)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D5_CD9.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "302a289620dc612df3",
+      "title": "Prova (Ledor)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D5_CD9_ledor.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "dc1140661933bdd040",
+      "title": "Prova (Ampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D5_CD9_ampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "6dc6832966ab9da2f1",
+      "title": "Prova (Superampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D5_CD9_superampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "5f7510c09b337ec7e3",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D5_CD9",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D5_CD9.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "e96655571ae8db8db2",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D6_CD5",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D6_CD5.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "fea6c72ea87c0d6f19",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D6_CD5",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D6_CD5.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "c0e7dca6e6dcd68d73",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D6_CD6",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D6_CD6.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "d02a914d2fb532adfa",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D6_CD6",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D6_CD6.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "6ae5dea8b9d9b2dc2d",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D6_CD7",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D6_CD7.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "0c4ad646cd058ce6d1",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D6_CD7",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D6_CD7.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "0ed943589b31c20e41",
+      "title": "Enem 2025 · Prova · 2025_PV_impresso_D6_CD8",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D6_CD8.pdf",
+      "kind": "Prova oficial · coletada",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "ca22de48545ca67ca2",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D6_CD8",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D6_CD8.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "fdd2318b32c9d03117",
+      "title": "Prova (Atendimento Especializado)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D6_CD11.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "44d280aa4bf9d85c47",
+      "title": "Prova (Ledor)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D6_CD11_ledor.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "5cfdc622f842116e52",
+      "title": "Prova (Ampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D6_CD11_ampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "5736a9701e0ca56671",
+      "title": "Prova (Superampliada)",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D6_CD11_superampliada.pdf",
+      "kind": "Documento oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    },
+    {
+      "id": "95570bc4cf44ed9243",
+      "title": "Enem 2025 · Gabarito · 2025_GB_impresso_D6_CD11",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D6_CD11.pdf",
+      "kind": "Gabarito oficial · coletado",
+      "examIds": [
+        "enem-2026"
+      ],
+      "collectedAt": "2026-10-08T10:27:29.056270+00:00",
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "status": "needs_review"
+    }
+  ],
+  "candidates": [],
+  "reports": [
+    {
+      "url": "https://apis.cebraspe.org.br/cebraspe/eventos/TC_DF_26_ANALISTA",
+      "checkedAt": "2026-10-08T10:27:29.056270+00:00",
+      "status": "collected",
+      "sha256": "e3f8a9a6fe2aebdf0dcb26b550e9c1ab248810383980763f019b67a544a6d9ca",
+      "bytes": 3640,
+      "documents": 4
+    },
+    {
+      "url": "https://apis.cebraspe.org.br/cebraspe/eventos/VESTUNB_27",
+      "checkedAt": "2026-10-08T10:27:29.056270+00:00",
+      "status": "collected",
+      "sha256": "6c5f3e9fecec146560b479c359fef13de3c2bb59f2cd1b5365a3e1cf7bebd321",
+      "bytes": 12370,
+      "documents": 8
+    },
+    {
+      "url": "https://www.concursosfcc.com.br/concursos/tcego125/index.html",
+      "checkedAt": "2026-10-08T10:27:29.056270+00:00",
+      "status": "unavailable",
+      "error": "robots.txt disallows collection or could not be verified"
+    },
+    {
+      "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+      "checkedAt": "2026-10-08T10:27:29.056270+00:00",
+      "status": "collected",
+      "sha256": "fd58ec6348205daca41d5662f3186c1af48b0e35ea4c07816895e0a5af88d94d",
+      "bytes": 232314,
+      "documents": 90
+    }
+  ],
+  "notice": "Catalogue only. No exam date is verified or changed by this collector. Read each notice and its amendments."
+}
