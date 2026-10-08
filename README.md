@@ -2,6 +2,12 @@
 
 Agenda de provas, laboratório de documentos e memória de aprendizagem em um aplicativo que funciona com dados locais. Versão 1.0.0, preparada em 8 de outubro de 2026.
 
+## Baixar o aplicativo Android
+
+**[Baixar Meridian-1.0.0.apk](https://github.com/Josperdias/mrd-q7m4-core/releases/download/apk-latest/Meridian-1.0.0.apk)** · [página da versão, com o SHA-256](https://github.com/Josperdias/mrd-q7m4-core/releases/tag/apk-latest)
+
+O arquivo é gerado pelo GitHub Actions a cada atualização da `main` e assinado sempre com a mesma chave. Para instalar, permita instalar apps de fontes desconhecidas no navegador usado no download. Exporte um backup antes de desinstalar uma versão anterior.
+
 ## Comece em cinco minutos
 
 1. Abra **Meus objetivos** e registre sua situação de inscrição em cada seleção. O app não presume que você esteja inscrito.
