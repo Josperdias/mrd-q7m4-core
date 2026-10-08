@@ -12,7 +12,10 @@ cp "$PROJECT_ROOT/dist/icon-192.png" "$BUILD/res/drawable/ic_launcher.png"
 javac -source 8 -target 8 -bootclasspath "$PLATFORM:$BT/core-lambda-stubs.jar" -d "$BUILD/classes" "$PROJECT_ROOT/android/src/app/mrd/q7m4/MainActivity.java"
 mapfile -t CLASS_FILES < <(find "$BUILD/classes" -name '*.class')
 "$BT/d8" --lib "$PLATFORM" --min-api 26 --output "$BUILD/dex" "${CLASS_FILES[@]}"
-"$BT/aapt" package -f -M "$PROJECT_ROOT/android/AndroidManifest.xml" -I "$PLATFORM" -S "$BUILD/res" -A "$BUILD/assets" -F "$BUILD/unsigned.apk"
+MANIFEST="$BUILD/AndroidManifest.xml"
+sed -e "s/android:versionCode=\"[0-9]*\"/android:versionCode=\"${MERIDIAN_VERSION_CODE:-1}\"/" -e "s/android:versionName=\"[^\"]*\"/android:versionName=\"${MERIDIAN_VERSION_NAME:-1.0.0}\"/" "$PROJECT_ROOT/android/AndroidManifest.xml" > "$MANIFEST"
+grep -q "android:versionCode=\"${MERIDIAN_VERSION_CODE:-1}\"" "$MANIFEST" || { echo "versionCode was not applied to the manifest" >&2; exit 1; }
+"$BT/aapt" package -f -M "$MANIFEST" -I "$PLATFORM" -S "$BUILD/res" -A "$BUILD/assets" -F "$BUILD/unsigned.apk"
 (cd "$BUILD/dex" && zip -q -j "$BUILD/unsigned.apk" classes.dex)
 "$BT/zipalign" -f -p 4 "$BUILD/unsigned.apk" "$BUILD/aligned.apk"
 # Signing: use the fixed key supplied through MERIDIAN_KEYSTORE / MERIDIAN_KS_PASS /
@@ -29,4 +32,5 @@ else
 fi
 "$BT/apksigner" sign --ks "$KEYSTORE" --ks-key-alias "$KS_ALIAS" --ks-pass env:MERIDIAN_KS_PASS --key-pass env:MERIDIAN_KEY_PASS --out "$BUILD/Meridian-1.0.0.apk" "$BUILD/aligned.apk"
 "$BT/apksigner" verify --verbose --print-certs "$BUILD/Meridian-1.0.0.apk"
+"$BT/aapt" dump badging "$BUILD/Meridian-1.0.0.apk" | grep -E "^(package|uses-permission: name=.android.permission.(INTERNET|REQUEST_INSTALL_PACKAGES))"
 echo "$BUILD/Meridian-1.0.0.apk"

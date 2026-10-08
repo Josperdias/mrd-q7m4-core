@@ -2,16 +2,28 @@ package app.mrd.q7m4;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.IntentFilter;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageInstaller;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Base64;
 import android.view.View;
 import android.webkit.*;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.security.MessageDigest;
+import org.json.JSONObject;
 import java.util.*;
 
 public class MainActivity extends Activity {
@@ -20,6 +32,12 @@ public class MainActivity extends Activity {
  private ValueCallback<Uri[]> fileCallback;
  private byte[] pendingExport;
  private static final int PICK=10,SAVE=11;
+ // Updates are read only from this fixed release; Android itself refuses an APK not signed with the installed key.
+ private static final String UPDATE_BASE="https://github.com/Josperdias/mrd-q7m4-core/releases/download/apk-latest/";
+ private static final String ACTION_INSTALL="app.mrd.q7m4.INSTALL_STATUS";
+ private static final long MAX_APK=80L*1024*1024;
+ private boolean updating;
+ private BroadcastReceiver installReceiver;
 
  @Override public void onCreate(Bundle state){
   super.onCreate(state);
@@ -27,9 +45,10 @@ public class MainActivity extends Activity {
   getWindow().setNavigationBarColor(Color.rgb(23,43,49));
   LinearLayout root=new LinearLayout(this);root.setOrientation(LinearLayout.VERTICAL);root.setBackgroundColor(Color.rgb(245,246,243));
   root.setOnApplyWindowInsetsListener((v,insets)->{v.setPadding(insets.getSystemWindowInsetLeft(),insets.getSystemWindowInsetTop(),insets.getSystemWindowInsetRight(),insets.getSystemWindowInsetBottom());return insets.consumeSystemWindowInsets();});
-  web=new WebView(this);root.addView(web,new LinearLayout.LayoutParams(-1,-1));setContentView(root);
-  WebSettings s=web.getSettings();s.setJavaScriptEnabled(true);s.setDomStorageEnabled(true);s.setDatabaseEnabled(true);s.setAllowFileAccess(false);s.setAllowContentAccess(true);s.setAllowFileAccessFromFileURLs(false);s.setAllowUniversalAccessFromFileURLs(false);s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);s.setDefaultTextEncodingName("UTF-8");s.setMediaPlaybackRequiresUserGesture(true);
-  web.addJavascriptInterface(new ExportBridge(),"MeridianNative");
+  web=new WebView(this);web.setBackgroundColor(Color.rgb(245,246,243));web.setOverScrollMode(View.OVER_SCROLL_NEVER);root.addView(web,new LinearLayout.LayoutParams(-1,-1));setContentView(root);
+  registerInstallReceiver();
+  WebSettings s=web.getSettings();s.setJavaScriptEnabled(true);s.setDomStorageEnabled(true);s.setDatabaseEnabled(true);s.setAllowFileAccess(false);s.setAllowContentAccess(true);s.setAllowFileAccessFromFileURLs(false);s.setAllowUniversalAccessFromFileURLs(false);s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);s.setDefaultTextEncodingName("UTF-8");s.setMediaPlaybackRequiresUserGesture(true);s.setSupportZoom(false);
+  web.addJavascriptInterface(new ExportBridge(),"MeridianNative");web.addJavascriptInterface(new UpdateBridge(),"MeridianUpdater");
   web.setWebViewClient(new WebViewClient(){
    @Override public boolean shouldOverrideUrlLoading(WebView v,WebResourceRequest req){Uri uri=req.getUrl();if(ORIGIN.startsWith(uri.getScheme()+"://"+uri.getHost()+"/"))return false;if("https".equals(uri.getScheme())||"http".equals(uri.getScheme())){try{startActivity(new Intent(Intent.ACTION_VIEW,uri));}catch(Exception e){message("Nenhum navegador disponível.");}}return true;}
    @Override public WebResourceResponse shouldInterceptRequest(WebView v,WebResourceRequest req){
@@ -56,10 +75,59 @@ public class MainActivity extends Activity {
    runOnUiThread(()->{if(web==null||web.getUrl()==null||!web.getUrl().startsWith(ORIGIN))return;try{pendingExport=Base64.decode(encoded,Base64.DEFAULT);Intent intent=new Intent(Intent.ACTION_CREATE_DOCUMENT);intent.addCategory(Intent.CATEGORY_OPENABLE);intent.setType(mime.split(";")[0]);intent.putExtra(Intent.EXTRA_TITLE,safeName);startActivityForResult(intent,SAVE);}catch(Exception e){pendingExport=null;message("Não foi possível preparar a exportação.");}});
   }
  }
+
+ // ---- In-app update ----
+ private void emit(String type,Object... kv){try{JSONObject o=new JSONObject().put("type",type);for(int i=0;i+1<kv.length;i+=2)o.put(String.valueOf(kv[i]),kv[i+1]);final String js="window.meridianUpdate&&window.meridianUpdate("+o.toString()+")";runOnUiThread(()->{if(web!=null)web.evaluateJavascript(js,null);});}catch(Exception e){}}
+ private PackageInfo selfInfo(){try{return getPackageManager().getPackageInfo(getPackageName(),0);}catch(Exception e){return null;}}
+ private long currentCode(){PackageInfo p=selfInfo();return p==null?0:(Build.VERSION.SDK_INT>=28?p.getLongVersionCode():p.versionCode);}
+ private String currentName(){PackageInfo p=selfInfo();return p==null||p.versionName==null?"":p.versionName;}
+ private HttpURLConnection open(String url) throws IOException{HttpURLConnection c=(HttpURLConnection)new URL(url).openConnection();c.setConnectTimeout(15000);c.setReadTimeout(30000);c.setRequestProperty("User-Agent","Meridian-Android");if(c.getResponseCode()!=200)throw new IOException("HTTP "+c.getResponseCode());return c;}
+ private JSONObject fetchInfo() throws Exception{HttpURLConnection c=open(UPDATE_BASE+"update.json");try(InputStream in=c.getInputStream();ByteArrayOutputStream out=new ByteArrayOutputStream()){byte[] buf=new byte[4096];int n;while((n=in.read(buf))>0){out.write(buf,0,n);if(out.size()>65536)throw new IOException("update.json too large");}return new JSONObject(out.toString("UTF-8"));}finally{c.disconnect();}}
+ private static String hex(byte[] bytes){StringBuilder b=new StringBuilder();for(byte x:bytes)b.append(String.format("%02x",x));return b.toString();}
+ private void registerInstallReceiver(){
+  installReceiver=new BroadcastReceiver(){@Override public void onReceive(Context c,Intent i){int st=i.getIntExtra(PackageInstaller.EXTRA_STATUS,-1);
+   if(st==PackageInstaller.STATUS_PENDING_USER_ACTION){Intent confirm=i.getParcelableExtra(Intent.EXTRA_INTENT);if(confirm!=null){confirm.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);try{startActivity(confirm);}catch(Exception e){message("Não foi possível abrir a confirmação de instalação.");}}}
+   else if(st!=PackageInstaller.STATUS_SUCCESS){emit("error","message","A instalação não foi concluída: "+String.valueOf(i.getStringExtra(PackageInstaller.EXTRA_STATUS_MESSAGE))+".");}}};
+  IntentFilter f=new IntentFilter(ACTION_INSTALL);
+  if(Build.VERSION.SDK_INT>=33)registerReceiver(installReceiver,f,Context.RECEIVER_NOT_EXPORTED);else registerReceiver(installReceiver,f);
+ }
+ private void downloadAndInstall() throws Exception{
+  JSONObject u=fetchInfo();long remote=u.getLong("versionCode");
+  if(remote<=currentCode()){emit("check","available",false,"versionCode",remote,"versionName",u.optString("versionName",""),"currentCode",currentCode(),"currentName",currentName());return;}
+  String want=u.getString("sha256").toLowerCase(Locale.ROOT);
+  File dir=new File(getCacheDir(),"updates");dir.mkdirs();File apk=new File(dir,"Meridian.apk");
+  MessageDigest md=MessageDigest.getInstance("SHA-256");
+  HttpURLConnection c=open(UPDATE_BASE+"Meridian-1.0.0.apk");
+  try{long total=c.getContentLengthLong();if(total>MAX_APK)throw new IOException("APK too large");
+   try(InputStream in=c.getInputStream();OutputStream out=new FileOutputStream(apk)){byte[] buf=new byte[64*1024];long got=0;int last=-1,n;while((n=in.read(buf))>0){out.write(buf,0,n);md.update(buf,0,n);got+=n;if(got>MAX_APK)throw new IOException("APK too large");if(total>0){int pct=(int)(got*100/total);if(pct!=last&&pct%5==0){last=pct;emit("progress","pct",pct);}}}}
+  }finally{c.disconnect();}
+  if(!hex(md.digest()).equals(want)){apk.delete();emit("error","message","O arquivo baixado não confere com o publicado. Tente novamente.");return;}
+  PackageInfo info=getPackageManager().getPackageArchiveInfo(apk.getAbsolutePath(),0);
+  if(info==null||!getPackageName().equals(info.packageName)){apk.delete();emit("error","message","O arquivo baixado não é uma versão do Meridian.");return;}
+  PackageInstaller pi=getPackageManager().getPackageInstaller();
+  PackageInstaller.SessionParams params=new PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL);params.setSize(apk.length());
+  int id=pi.createSession(params);
+  try(PackageInstaller.Session session=pi.openSession(id)){
+   try(InputStream in=new FileInputStream(apk);OutputStream out=session.openWrite("Meridian.apk",0,apk.length())){byte[] buf=new byte[64*1024];int n;while((n=in.read(buf))>0)out.write(buf,0,n);session.fsync(out);}
+   Intent intent=new Intent(ACTION_INSTALL).setPackage(getPackageName());
+   PendingIntent pending=PendingIntent.getBroadcast(this,id,intent,PendingIntent.FLAG_UPDATE_CURRENT|(Build.VERSION.SDK_INT>=31?PendingIntent.FLAG_MUTABLE:0));
+   emit("installing");session.commit(pending.getIntentSender());
+  }
+ }
+ public class UpdateBridge{
+  @JavascriptInterface public String appInfo(){try{return new JSONObject().put("versionCode",currentCode()).put("versionName",currentName()).toString();}catch(Exception e){return "{}";}}
+  @JavascriptInterface public void checkUpdate(){new Thread(()->{try{JSONObject u=fetchInfo();long remote=u.getLong("versionCode");emit("check","available",remote>currentCode(),"versionCode",remote,"versionName",u.optString("versionName",""),"currentCode",currentCode(),"currentName",currentName());}catch(Exception e){emit("error","message","Não foi possível verificar agora. Confira a conexão e tente de novo.");}}).start();}
+  @JavascriptInterface public void installUpdate(){runOnUiThread(()->{
+   if(web==null||web.getUrl()==null||!web.getUrl().startsWith(ORIGIN))return;
+   if(!getPackageManager().canRequestPackageInstalls()){try{startActivity(new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,Uri.parse("package:"+getPackageName())));}catch(Exception e){}emit("need-permission");return;}
+   if(updating)return;updating=true;
+   new Thread(()->{try{downloadAndInstall();}catch(Exception e){emit("error","message","Não foi possível baixar a atualização. Confira a conexão e tente de novo.");}finally{updating=false;}}).start();
+  });}
+ }
  @Override protected void onActivityResult(int request,int result,Intent data){super.onActivityResult(request,result,data);
   if(request==PICK&&fileCallback!=null){fileCallback.onReceiveValue(WebChromeClient.FileChooserParams.parseResult(result,data));fileCallback=null;}
   if(request==SAVE){if(result==RESULT_OK&&data!=null&&data.getData()!=null&&pendingExport!=null){try(OutputStream stream=getContentResolver().openOutputStream(data.getData())){stream.write(pendingExport);message("Arquivo salvo.");}catch(Exception e){message("Falha ao salvar. Tente exportar novamente.");}}pendingExport=null;}
  }
  @Override public void onBackPressed(){if(web!=null){web.evaluateJavascript("(function(){var d=document.querySelector('dialog[open]');if(d){d.close();return 'closed';}return 'back';})()",result->{if("\"back\"".equals(result)){if(web.canGoBack())web.goBack();else new AlertDialog.Builder(this).setMessage("Sair do Meridian?").setPositiveButton("Sair",(d,w)->finish()).setNegativeButton("Continuar",null).show();}});}else super.onBackPressed();}
- @Override protected void onDestroy(){if(web!=null){web.removeJavascriptInterface("MeridianNative");web.destroy();web=null;}super.onDestroy();}
+ @Override protected void onDestroy(){if(installReceiver!=null){try{unregisterReceiver(installReceiver);}catch(Exception e){}installReceiver=null;}if(web!=null){web.removeJavascriptInterface("MeridianNative");web.removeJavascriptInterface("MeridianUpdater");web.destroy();web=null;}super.onDestroy();}
 }

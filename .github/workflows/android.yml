@@ -26,6 +26,8 @@ jobs:
           MERIDIAN_KS_PASS: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           MERIDIAN_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
           MERIDIAN_KEY_PASS: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          MERIDIAN_VERSION_CODE: ${{ github.run_number }}
+          MERIDIAN_VERSION_NAME: 1.0.${{ github.run_number }}
         run: |
           if [ -n "$KEYSTORE_B64" ]; then
             echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/release.keystore"
@@ -46,8 +48,9 @@ jobs:
         run: |
           APK=android/build/Meridian-1.0.0.apk
           SUM="$(sha256sum "$APK" | cut -d' ' -f1)"
+          printf '{"versionCode":%s,"versionName":"1.0.%s","sha256":"%s","commit":"%s"}\n' "$GITHUB_RUN_NUMBER" "$GITHUB_RUN_NUMBER" "$SUM" "$GITHUB_SHA" > "$RUNNER_TEMP/update.json"
           gh release delete apk-latest --cleanup-tag --yes || true
-          gh release create apk-latest "$APK" \
+          gh release create apk-latest "$APK" "$RUNNER_TEMP/update.json" \
             --target "$GITHUB_SHA" \
-            --title "Meridian 1.0.0 (APK)" \
-            --notes "APK built by GitHub Actions from commit $GITHUB_SHA ($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID). SHA-256: $SUM"
+            --title "Meridian 1.0.$GITHUB_RUN_NUMBER (APK)" \
+            --notes "APK built by GitHub Actions from commit $GITHUB_SHA ($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID). Version 1.0.$GITHUB_RUN_NUMBER (build $GITHUB_RUN_NUMBER). SHA-256: $SUM"
