@@ -4,7 +4,7 @@ Agenda de provas, laboratório de documentos e memória de aprendizagem em um ap
 
 ## Baixar o aplicativo Android
 
-**[Baixar o APK mais recente](https://github.com/Josperdias/mrd-q7m4-core/releases/tag/apk-latest)** (arquivo `Meridian-1.0.N.apk`, com a versão no nome, e o SHA-256 na página) · [download direto](https://github.com/Josperdias/mrd-q7m4-core/releases/download/apk-latest/Meridian-1.0.0.apk)
+**[Baixar o APK mais recente](https://github.com/Josperdias/mrd-q7m4-core/releases/tag/apk-latest)**: na página, toque em `Meridian-1.0.N.apk` (a versão vem no nome do arquivo) e confira o SHA-256 na descrição.
 
 O arquivo é gerado pelo GitHub Actions a cada atualização da `main` e assinado sempre com a mesma chave. Para instalar, permita instalar apps de fontes desconhecidas no navegador usado no download. Exporte um backup antes de desinstalar uma versão anterior.
 
