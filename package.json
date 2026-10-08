@@ -1,0 +1,19 @@
+{
+  "name": "meridian-study",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline-first study workspace",
+  "scripts": {
+    "test": "node --test tests/core.test.cjs",
+    "build": "node scripts/package.mjs",
+    "collect": "python3 scripts/collector.py",
+    "test:ui": "node tests/ui-smoke.cjs",
+    "test:documents": "node tests/documents.cjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.13",
+    "fake-indexeddb": "6.2.5",
+    "@napi-rs/canvas": "0.1.100",
+    "tesseract.js": "7.0.0"
+  }
+}

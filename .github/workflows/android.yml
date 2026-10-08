@@ -1,0 +1,25 @@
+name: Android package
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['dist/**', 'android/**', 'scripts/build-android.sh', '.github/workflows/android.yml']
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - run: bash scripts/build-android.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Meridian-Android-development
+          path: android/build/Meridian-1.0.0.apk
+          retention-days: 30

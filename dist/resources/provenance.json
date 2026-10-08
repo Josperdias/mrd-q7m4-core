@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://cdn.cebraspe.org.br/concursos/TC_DF_26_ANALISTA/arquivos/132841120D1767C91430042A81063E012CD5EDDBC11169982C8B711A9A932EBB.pdf",
+    "localUrl": "resources/tcdf-edital-2026.pdf",
+    "sha256": "2874935266474c40c87592a83275d0a0de1a7c38b4ffc0675a657d575c8cd68f",
+    "bytes": 693314,
+    "downloadedAt": "2026-10-08"
+  },
+  {
+    "url": "https://cdn.cebraspe.org.br/vestibulares/VESTUNB_27/arquivos/EFB9C7BCA02CFC57B7F4128EA22079B33CE4868ADE02FE086C6AA3614280B124.pdf",
+    "localUrl": "resources/unb-edital-2027.pdf",
+    "sha256": "252edcacc04216c0221a6afe927a3e853cc54e594998659e905deb286b1081c1",
+    "bytes": 1707936,
+    "downloadedAt": "2026-10-08"
+  },
+  {
+    "url": "https://www.concursosfcc.com.br/concursos/tcego125/edital_de_abertura_versaex771_o_15_09_2026_-_consolidado_com_retificacoes__1_.pdf",
+    "localUrl": "resources/tcego-edital-2026.pdf",
+    "sha256": "069fc2fa87e0e2e8a570675de1d0bce438959e8904961e0936d35d3b283e36b3",
+    "bytes": 527047,
+    "downloadedAt": "2026-10-08"
+  }
+]
