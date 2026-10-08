@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths: ['dist/**', 'android/**', 'scripts/build-android.sh', '.github/workflows/android.yml']
 permissions:
-  contents: read
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -39,3 +39,15 @@ jobs:
           name: Meridian-Android-development
           path: android/build/Meridian-1.0.0.apk
           retention-days: 30
+      - name: Publish APK to the public release
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          APK=android/build/Meridian-1.0.0.apk
+          SUM="$(sha256sum "$APK" | cut -d' ' -f1)"
+          gh release delete apk-latest --cleanup-tag --yes || true
+          gh release create apk-latest "$APK" \
+            --target "$GITHUB_SHA" \
+            --title "Meridian 1.0.0 (APK)" \
+            --notes "APK built by GitHub Actions from commit $GITHUB_SHA ($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID). SHA-256: $SUM"
